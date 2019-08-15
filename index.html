@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>cross-stitch_script</title>
+
+  <div id="p5_loading" class="loadingclass">Loading...</div>
+
+  <script src="libraries/p5.min.js" type="text/javascript"></script>
+  <script src="libraries/p5.dom.min.js" type="text/javascript"></script>
+  <script src="libraries/p5.sound.min.js" type="text/javascript"></script>
+
+  <script src="pageSetup.js" type="text/javascript"></script>
+  <script src="buttonClass.js" type="text/javascript"></script>
+  <script src="sketch.js" type="text/javascript"></script>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    
+    canvas {
+      vertical-align: top;
+    }
+    
+    button {
+      font-size: 20px);
+      border-radius: 8px;
+      position: absolute;
+      left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Put the Canvas behind the other positioned elements. -->
+  <div id="canvasHere" style="position:absolute; z-index: -1;"></div>
+  
+  <!-- Create buttons that allow user to choose a color. -->
+  <button type="button" id="redButton" 
+      style="background-color:red; color:red; top:15px;" 
+      onclick="chooseColor('red')">[ ]</button>
+  <button type="button" id="greenButton" 
+      style="background-color:green; color:green; top:45px;" 
+      onclick="chooseColor('green')">[ ]</button>
+  <button type="button" id="blueButton" 
+      style="background-color:blue; color:blue; top:75px;" 
+      onclick="chooseColor('blue')">[ ]</button>
+
+</body>
+
+</html>
