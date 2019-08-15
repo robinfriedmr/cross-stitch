@@ -1,4 +1,6 @@
 const SCALE = 4;
+const ctrlKey = 17;
+const zKey = 90;
 
 var thread;
 var mX, mY, pmX, pmY;
@@ -85,16 +87,16 @@ function correct(mouseCoordinate) {
 
 function checkKeys() {
   document.addEventListener("keydown", function(event) {
-    if (event.which === 90 && ctrlPressed == true) {
+    if (event.which === zKey && ctrlPressed == true) {
       console.log("Z was pressed while ctrlPressed was true!");
       undo();
-    } else if (event.which === 17) { //
+    } else if (event.which === ctrlKey) { 
       ctrlPressed = true;
     }
   });
 
   document.addEventListener("keyup", function(event) {
-    if (event.which === 17 && ctrlPressed == true) {
+    if (event.which === ctrlKey && ctrlPressed == true) {
       ctrlPressed = false;
     }
   });
